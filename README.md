@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./readmebox.sv" alt="Profile Box" width="100%" />
+  <img src="./readmebox.svg" alt="Profile Box" width="100%" />
 </p>
 
 
