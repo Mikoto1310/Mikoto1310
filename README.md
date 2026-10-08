@@ -81,3 +81,7 @@ Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring f
 <p align="center">
   <img src="./footbox.svg?v=2" alt="Footer Box" width="100%" />
 </p>
+
+<div data-importer="profile-views" align="center">
+  <img data-importer="profile-views" src="https://visitor-badge.laobi.icu/badge?page_id=Mikoto1310.Mikoto1310&"  />
+</div>
