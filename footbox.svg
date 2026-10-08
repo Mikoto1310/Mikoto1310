@@ -1,44 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 895 280" width="895" height="280" role="img" aria-label="Thanks for visiting - footer for Rehan Nasywa Ramadhan">
-  <title>Thanks for visiting - footer for Rehan Nasywa Ramadhan</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 895 136" width="895" height="136" role="img" aria-label="Footer for Rehan Nasywa Ramadhan">
+  <title>Footer for Rehan Nasywa Ramadhan</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0d1117"/>
       <stop offset="55%" stop-color="#11161d"/>
       <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
-
     <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e252e"/>
       <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
-
     <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#4a525d"/>
       <stop offset="45%" stop-color="#30363d"/>
       <stop offset="100%" stop-color="#232931"/>
     </linearGradient>
-
-    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#3fb950" stop-opacity="0.9"/>
-      <stop offset="34%" stop-color="#30363d" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#30363d" stop-opacity="0"/>
-    </linearGradient>
-
-    <linearGradient id="name-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7ee89a"/>
-      <stop offset="100%" stop-color="#2ea043"/>
-    </linearGradient>
-
-    <radialGradient id="halo-green" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#39d353" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#39d353" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="halo-blue" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
-    </radialGradient>
-
     <radialGradient id="led-red" cx="35%" cy="28%" r="78%">
       <stop offset="0%" stop-color="#ff9c93"/>
       <stop offset="100%" stop-color="#ec544a"/>
@@ -51,15 +27,17 @@
       <stop offset="0%" stop-color="#7cf08e"/>
       <stop offset="100%" stop-color="#1fa832"/>
     </radialGradient>
-
+    <radialGradient id="halo-green" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#39d353" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+    </radialGradient>
     <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
       <circle cx="1.6" cy="1.6" r="1.05" fill="#2c333b" opacity="0.5"/>
     </pattern>
-
-    <filter id="soft-glow" x="-40%" y="-80%" width="180%" height="260%">
-      <feGaussianBlur stdDeviation="6.5"/>
-    </filter>
-
     <filter id="eye-glow" x="-80%" y="-80%" width="260%" height="260%">
       <feGaussianBlur stdDeviation="2.5" result="b"/>
       <feMerge>
@@ -67,60 +45,42 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-
     <style>
       .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
       .cmd   { font-size: 14px; font-weight: 600; }
-      .body  { font-size: 13px; }
+      .body  { font-size: 12px; }
+      .hero  { font-size: 20px; font-weight: 700; }
       .micro { font-size: 10px; font-weight: 600; letter-spacing: 1.6px; }
-      .hero  { font-size: 26px; font-weight: 700; }
       .dim  { fill: #8b949e; }
-      .key  { fill: #8b949e; }
-      .val  { fill: #c9d1d9; }
       .ok   { fill: #3fb950; }
       .blue { fill: #58a6ff; }
 
       .cursor  { fill: #3fb950; animation: blink 1.05s steps(1, end) infinite; }
       .name    { animation: breathe 5s ease-in-out infinite; }
       .led     { animation: breathe 3.4s ease-in-out infinite; }
-      .fade-up { animation: fadeUp .8s ease-out .5s both; }
-      .reveal-b { animation: reveal-b .95s steps(20, end) .35s both; }
-      .eye { animation: eye-blink 5.6s steps(1, end) infinite; }
-      .lit { animation: lit .4s ease-out both; }
-      .s0 { animation-delay: .95s; }
-      .s1 { animation-delay: 1.07s; }
-      .s2 { animation-delay: 1.19s; }
-      .s3 { animation-delay: 1.31s; }
+      .eye     { animation: eye-blink 5.6s steps(1, end) infinite; }
+      .reveal  { animation: reveal .95s steps(20, end) .35s both; }
 
-      @keyframes blink   { 0%,45% { opacity: 1; } 46%,100% { opacity: 0; } }
-      @keyframes breathe { 0%,100% { opacity: .34; } 50% { opacity: .78; } }
-      @keyframes fadeUp   { from { opacity: 0; transform: translateY(7px); }
-                            to   { opacity: 1; transform: translateY(0); } }
+      @keyframes blink    { 0%,45% { opacity: 1; } 46%,100% { opacity: 0; } }
+      @keyframes breathe  { 0%,100% { opacity: .34; } 50% { opacity: .78; } }
       @keyframes eye-blink { 0%, 90%, 100% { opacity: 1; }
                              93%, 96% { opacity: 0; } }
-      @keyframes reveal-b { from { width: 0; } to { width: 210px; } }
-      @keyframes lit { from { opacity: .15; } to { opacity: 1; } }
+      @keyframes reveal   { from { width: 0; } to { width: 210px; } }
 
-      /* Respect reduced-motion, and guarantee a correct static render if the
-         viewer never runs animations: every element falls back to its natural
-         state (prompt fully revealed, eyes open, bar full). */
       @media (prefers-reduced-motion: reduce) {
-        .cursor, .name, .led, .fade-up, .eye, .reveal-b, .lit {
-          animation: none !important;
-        }
+        .cursor, .name, .led, .eye, .reveal { animation: none !important; }
       }
     </style>
-
-    <clipPath id="reveal-b">
-      <rect class="reveal-b" x="96" y="82" width="210.0" height="30"/>
+    <clipPath id="reveal">
+      <rect class="reveal" x="96" y="60" width="210" height="22"/>
     </clipPath>
   </defs>
 
   <!-- backdrop -->
-  <rect x="1" y="1" width="893" height="278" rx="14" fill="url(#bg)"/>
-  <rect x="1" y="41" width="893" height="238" fill="url(#dots)"/>
-  <ellipse cx="215" cy="150" rx="310" ry="145" fill="url(#halo-green)"/>
-  <ellipse cx="700" cy="150" rx="340" ry="155" fill="url(#halo-blue)"/>
+  <rect x="1" y="1" width="893" height="134" rx="14" fill="url(#bg)"/>
+  <rect x="1" y="41" width="893" height="94" fill="url(#dots)"/>
+  <ellipse cx="215" cy="88" rx="310" ry="72" fill="url(#halo-green)"/>
+  <ellipse cx="700" cy="88" rx="340" ry="76" fill="url(#halo-blue)"/>
 
   <!-- window chrome -->
   <path d="M1 15 C1 7.3 7.3 1 15 1 L880 1 C887.7 1 894 7.3 894 15 L894 41 L1 41 Z" fill="url(#chrome)"/>
@@ -131,128 +91,92 @@
   <text x="447.5" y="25.5" text-anchor="middle" class="mono" font-size="12" fill="#8b949e">hannwya@workspace:~/exit</text>
   <circle cx="806" cy="21" r="3" fill="#3fb950" class="led"/>
   <text x="818" y="25" class="mono micro" fill="#6e7681">SESSION</text>
-  <text x="56" y="100" class="mono cmd blue">&#10148; ~</text>
-  <g clip-path="url(#reveal-b)">
-    <text x="96" y="100" class="mono cmd" fill="#f0f6fc">echo $STATUS &amp;&amp; exit<tspan class="cursor">&#9612;</tspan></text>
+
+  <!-- prompt -->
+  <text x="56" y="74" class="mono cmd blue">&#10148; ~</text>
+  <g clip-path="url(#reveal)">
+    <text x="96" y="74" class="mono cmd" fill="#f0f6fc">echo $STATUS &amp;&amp; exit<tspan class="cursor">&#9612;</tspan></text>
   </g>
 
-  <!-- headline -->
-  <text x="56" y="150" class="mono hero name" fill="#39d353"
-        opacity="0.5" filter="url(#soft-glow)">Thanks for visiting!</text>
-  <text x="56" y="150" class="mono hero" fill="url(#name-grad)">Thanks for visiting!</text>
+  <!-- one-line closer -->
+  <text x="56" y="106" class="mono body"><tspan class="dim">[process completed &#183; code </tspan><tspan class="ok">0</tspan><tspan class="dim">]</tspan><tspan class="dim"> &#183; </tspan><tspan class="ok">thanks for visiting!</tspan><tspan class="cursor">&#9612;</tspan></text>
 
-  <line x1="56" y1="170" x2="452" y2="170" stroke="url(#rule)" stroke-width="1.5"/>
-
-  <text x="56" y="194" class="mono body dim">Feel free to explore my repositories or</text>
-  <text x="56" y="215" class="mono body dim">connect for collaborations.</text>
-
-  <text x="56" y="243" class="mono body dim">[Process completed with code <tspan class="ok">0</tspan>. Session closed]<tspan class="cursor">&#9612;</tspan></text>
-
-  <!-- companion cameo: the header robot, small, waving goodbye -->
-  <g class="fade-up" shape-rendering="crispEdges" aria-hidden="true">
-    <rect x="482" y="190" width="4" height="4" fill="#39d353" class="led"/>
-    <rect x="482" y="194" width="4" height="4" fill="#8b949e"/>
-    <rect x="482" y="198" width="4" height="4" fill="#8b949e"/>
-    <rect x="450" y="202" width="60" height="4" fill="#c9d1d9"/>
-    <rect x="514" y="202" width="8" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="206" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="454" y="206" width="52" height="4" fill="#30363d"/>
-    <rect x="506" y="206" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="514" y="206" width="8" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="210" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="454" y="210" width="4" height="4" fill="#30363d"/>
-    <rect x="458" y="210" width="44" height="4" fill="#010409"/>
-    <rect x="502" y="210" width="4" height="4" fill="#30363d"/>
-    <rect x="506" y="210" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="514" y="210" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="214" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="454" y="214" width="4" height="4" fill="#30363d"/>
-    <rect x="458" y="214" width="8" height="4" fill="#010409"/>
-    <rect x="474" y="214" width="12" height="4" fill="#010409"/>
-    <rect x="494" y="214" width="8" height="4" fill="#010409"/>
-    <rect x="502" y="214" width="4" height="4" fill="#30363d"/>
-    <rect x="506" y="214" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="514" y="214" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="218" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="454" y="218" width="4" height="4" fill="#30363d"/>
-    <rect x="458" y="218" width="8" height="4" fill="#010409"/>
-    <rect x="474" y="218" width="12" height="4" fill="#010409"/>
-    <rect x="494" y="218" width="8" height="4" fill="#010409"/>
-    <rect x="502" y="218" width="4" height="4" fill="#30363d"/>
-    <rect x="506" y="218" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="514" y="218" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="222" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="454" y="222" width="4" height="4" fill="#30363d"/>
-    <rect x="458" y="222" width="44" height="4" fill="#010409"/>
-    <rect x="502" y="222" width="4" height="4" fill="#30363d"/>
-    <rect x="506" y="222" width="12" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="226" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="454" y="226" width="4" height="4" fill="#30363d"/>
-    <rect x="458" y="226" width="16" height="4" fill="#010409"/>
-    <rect x="474" y="226" width="4" height="4" fill="#26a641"/>
-    <rect x="478" y="226" width="8" height="4" fill="#010409"/>
-    <rect x="486" y="226" width="4" height="4" fill="#26a641"/>
-    <rect x="490" y="226" width="12" height="4" fill="#010409"/>
-    <rect x="502" y="226" width="4" height="4" fill="#30363d"/>
-    <rect x="506" y="226" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="230" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="454" y="230" width="4" height="4" fill="#30363d"/>
-    <rect x="458" y="230" width="20" height="4" fill="#010409"/>
-    <rect x="478" y="230" width="4" height="4" fill="#26a641"/>
-    <rect x="482" y="230" width="20" height="4" fill="#010409"/>
-    <rect x="502" y="230" width="4" height="4" fill="#30363d"/>
-    <rect x="506" y="230" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="234" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="454" y="234" width="4" height="4" fill="#30363d"/>
-    <rect x="458" y="234" width="44" height="4" fill="#010409"/>
-    <rect x="502" y="234" width="4" height="4" fill="#30363d"/>
-    <rect x="506" y="234" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="238" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="454" y="238" width="52" height="4" fill="#30363d"/>
-    <rect x="506" y="238" width="4" height="4" fill="#c9d1d9"/>
-    <rect x="450" y="242" width="60" height="4" fill="#c9d1d9"/>
-    <rect x="474" y="246" width="12" height="4" fill="#30363d"/>
-    <rect x="466" y="250" width="28" height="4" fill="#c9d1d9"/>
+  <!-- companion -->
+  <g shape-rendering="crispEdges" aria-hidden="true">
+    <rect x="805" y="65" width="3" height="3" fill="#39d353" class="led"/>
+    <rect x="805" y="68" width="3" height="3" fill="#8b949e"/>
+    <rect x="805" y="71" width="3" height="3" fill="#8b949e"/>
+    <rect x="781" y="74" width="45" height="3" fill="#c9d1d9"/>
+    <rect x="829" y="74" width="6" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="77" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="784" y="77" width="39" height="3" fill="#30363d"/>
+    <rect x="823" y="77" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="829" y="77" width="6" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="80" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="784" y="80" width="3" height="3" fill="#30363d"/>
+    <rect x="787" y="80" width="33" height="3" fill="#010409"/>
+    <rect x="820" y="80" width="3" height="3" fill="#30363d"/>
+    <rect x="823" y="80" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="829" y="80" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="83" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="784" y="83" width="3" height="3" fill="#30363d"/>
+    <rect x="787" y="83" width="6" height="3" fill="#010409"/>
+    <rect x="799" y="83" width="9" height="3" fill="#010409"/>
+    <rect x="814" y="83" width="6" height="3" fill="#010409"/>
+    <rect x="820" y="83" width="3" height="3" fill="#30363d"/>
+    <rect x="823" y="83" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="829" y="83" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="86" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="784" y="86" width="3" height="3" fill="#30363d"/>
+    <rect x="787" y="86" width="6" height="3" fill="#010409"/>
+    <rect x="799" y="86" width="9" height="3" fill="#010409"/>
+    <rect x="814" y="86" width="6" height="3" fill="#010409"/>
+    <rect x="820" y="86" width="3" height="3" fill="#30363d"/>
+    <rect x="823" y="86" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="829" y="86" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="89" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="784" y="89" width="3" height="3" fill="#30363d"/>
+    <rect x="787" y="89" width="33" height="3" fill="#010409"/>
+    <rect x="820" y="89" width="3" height="3" fill="#30363d"/>
+    <rect x="823" y="89" width="9" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="92" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="784" y="92" width="3" height="3" fill="#30363d"/>
+    <rect x="787" y="92" width="12" height="3" fill="#010409"/>
+    <rect x="799" y="92" width="3" height="3" fill="#26a641"/>
+    <rect x="802" y="92" width="6" height="3" fill="#010409"/>
+    <rect x="808" y="92" width="3" height="3" fill="#26a641"/>
+    <rect x="811" y="92" width="9" height="3" fill="#010409"/>
+    <rect x="820" y="92" width="3" height="3" fill="#30363d"/>
+    <rect x="823" y="92" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="95" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="784" y="95" width="3" height="3" fill="#30363d"/>
+    <rect x="787" y="95" width="15" height="3" fill="#010409"/>
+    <rect x="802" y="95" width="3" height="3" fill="#26a641"/>
+    <rect x="805" y="95" width="15" height="3" fill="#010409"/>
+    <rect x="820" y="95" width="3" height="3" fill="#30363d"/>
+    <rect x="823" y="95" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="98" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="784" y="98" width="3" height="3" fill="#30363d"/>
+    <rect x="787" y="98" width="33" height="3" fill="#010409"/>
+    <rect x="820" y="98" width="3" height="3" fill="#30363d"/>
+    <rect x="823" y="98" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="101" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="784" y="101" width="39" height="3" fill="#30363d"/>
+    <rect x="823" y="101" width="3" height="3" fill="#c9d1d9"/>
+    <rect x="781" y="104" width="45" height="3" fill="#c9d1d9"/>
+    <rect x="799" y="107" width="9" height="3" fill="#30363d"/>
+    <rect x="793" y="110" width="21" height="3" fill="#c9d1d9"/>
     <g class="eye" filter="url(#eye-glow)">
-      <rect x="466" y="214" width="8" height="4" fill="#39d353"/>
-      <rect x="466" y="218" width="8" height="4" fill="#39d353"/>
+      <rect x="793" y="83" width="6" height="3" fill="#39d353"/>
+      <rect x="793" y="86" width="6" height="3" fill="#39d353"/>
     </g>
     <g class="eye" filter="url(#eye-glow)">
-      <rect x="486" y="214" width="8" height="4" fill="#39d353"/>
-      <rect x="486" y="218" width="8" height="4" fill="#39d353"/>
+      <rect x="808" y="83" width="6" height="3" fill="#39d353"/>
+      <rect x="808" y="86" width="6" height="3" fill="#39d353"/>
     </g>
   </g>
 
-  <!-- session panel -->
-  <rect x="560" y="66" width="295" height="188" rx="10" fill="#0d1117" fill-opacity="0.72" stroke="#21262d"/>
-  <text x="584" y="90" class="mono micro" fill="#8b949e">SESSION</text>
-  <text x="831" y="90" text-anchor="end" class="mono micro" fill="#3fb950">CLOSED</text>
-  <line x1="584" y1="102" x2="831" y2="102" stroke="#21262d"/>
-
-  <g class="mono body fade-up">
-    <text x="584" y="130"><tspan class="key">connection     </tspan><tspan fill="#6e7681">:</tspan> <tspan class="ok">ok</tspan></text>
-    <text x="584" y="153"><tspan class="key">repositories   </tspan><tspan fill="#6e7681">:</tspan> <tspan class="val">open</tspan></text>
-    <text x="584" y="176"><tspan class="key">collaborations </tspan><tspan fill="#6e7681">:</tspan> <tspan class="val">welcome</tspan></text>
-  </g>
-
-  <line x1="584" y1="194" x2="831" y2="194" stroke="#21262d"/>
-
-  <text x="584" y="212" class="mono micro" fill="#6e7681">SIGNAL</text>
-  <text x="700" y="212" text-anchor="end" class="mono micro" fill="#3fb950">STRONG</text>
-  <rect class="lit s0" x="584" y="232" width="12" height="6"  rx="2" fill="#3fb950"/>
-  <rect class="lit s1" x="601" y="228" width="12" height="10" rx="2" fill="#3fb950"/>
-  <rect class="lit s2" x="618" y="224" width="12" height="14" rx="2" fill="#3fb950"/>
-  <rect class="lit s3" x="635" y="220" width="12" height="18" rx="2" fill="#3fb950"/>
-  <text x="716" y="212" class="mono micro" fill="#6e7681">BATTERY</text>
-  <text x="831" y="212" text-anchor="end" class="mono micro" fill="#3fb950">100%</text>
-  <rect x="716" y="224" width="78" height="14" rx="3" fill="none" stroke="#30363d" stroke-width="1.5"/>
-  <rect x="796" y="228" width="4" height="6" rx="1.5" fill="#30363d"/>
-  <rect class="lit s0" x="719"   y="227" width="16.5" height="8" rx="2" fill="#3fb950"/>
-  <rect class="lit s1" x="737.5" y="227" width="16.5" height="8" rx="2" fill="#3fb950"/>
-  <rect class="lit s2" x="756"   y="227" width="16.5" height="8" rx="2" fill="#3fb950"/>
-  <rect class="lit s3" x="774.5" y="227" width="16.5" height="8" rx="2" fill="#3fb950"/>
-
-  <!-- frame drawn last so the border is never clipped -->
-  <rect x="0.75" y="0.75" width="893.5" height="278.5" rx="14" fill="none"
+  <!-- frame -->
+  <rect x="0.75" y="0.75" width="893.5" height="134.5" rx="14" fill="none"
         stroke="url(#edge)" stroke-width="1.5"/>
 </svg>
