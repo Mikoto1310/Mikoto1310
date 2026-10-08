@@ -4,7 +4,7 @@
 
 
 # About Me:
-Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring full-stack development, cybersecurity, and robotics. I love tinkering with everything from interactive web applications to binary analysis and hands-on hardware prototyping. Still learning, constantly building, and always excited to bridge the gap between software, security, and smart machines.
+Hi! I'm Rehan Nasywa Ramadhan, a tech enthusiast exploring full-stack development, cybersecurity, and robotics. I enjoy experimenting with everything from web apps to Capture the Flag (CTF) and hands-on hardware prototyping. I'm constantly learning, building sustainably, and passionate about bridging the gap between software, security, and technology.
 
 ###
 
