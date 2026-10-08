@@ -99,7 +99,7 @@
   </g>
 
   <!-- one-line closer -->
-  <text x="56" y="106" class="mono body"><tspan class="dim">[process completed &#183; code </tspan><tspan class="ok">0</tspan><tspan class="dim">]</tspan><tspan class="dim"> &#183; </tspan><tspan class="ok">thanks for visiting!</tspan><tspan class="cursor">&#9612;</tspan></text>
+  <text x="56" y="106" class="mono body"><tspan class="dim">[process completed &#183; code </tspan><tspan class="ok">0</tspan><tspan class="dim">]</tspan><tspan class="dim"> &#183; </tspan><tspan class="ok">thanks for visiting!</tspan></text>
 
   <!-- companion -->
   <g shape-rendering="crispEdges" aria-hidden="true">
