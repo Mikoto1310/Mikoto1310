@@ -29,11 +29,6 @@
       <stop offset="100%" stop-color="#2ea043"/>
     </linearGradient>
 
-    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1f6f33"/>
-      <stop offset="100%" stop-color="#3fb950"/>
-    </linearGradient>
-
     <radialGradient id="halo-green" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#39d353" stop-opacity="0.15"/>
       <stop offset="100%" stop-color="#39d353" stop-opacity="0"/>
@@ -91,6 +86,11 @@
       .fade-up { animation: fadeUp .8s ease-out .5s both; }
       .reveal-b { animation: reveal-b .95s steps(20, end) .35s both; }
       .eye { animation: eye-blink 5.6s steps(1, end) infinite; }
+      .lit { animation: lit .4s ease-out both; }
+      .s0 { animation-delay: .95s; }
+      .s1 { animation-delay: 1.07s; }
+      .s2 { animation-delay: 1.19s; }
+      .s3 { animation-delay: 1.31s; }
 
       @keyframes blink   { 0%,45% { opacity: 1; } 46%,100% { opacity: 0; } }
       @keyframes breathe { 0%,100% { opacity: .34; } 50% { opacity: .78; } }
@@ -99,13 +99,13 @@
       @keyframes eye-blink { 0%, 90%, 100% { opacity: 1; }
                              93%, 96% { opacity: 0; } }
       @keyframes reveal-b { from { width: 0; } to { width: 210px; } }
-      @keyframes fill     { from { width: 0; } to { width: 247px; } }
+      @keyframes lit { from { opacity: .15; } to { opacity: 1; } }
 
       /* Respect reduced-motion, and guarantee a correct static render if the
          viewer never runs animations: every element falls back to its natural
          state (prompt fully revealed, eyes open, bar full). */
       @media (prefers-reduced-motion: reduce) {
-        .cursor, .name, .led, .fade-up, .eye, .reveal-b, .fillbar {
+        .cursor, .name, .led, .fade-up, .eye, .reveal-b, .lit {
           animation: none !important;
         }
       }
@@ -237,11 +237,20 @@
 
   <line x1="584" y1="194" x2="831" y2="194" stroke="#21262d"/>
 
-  <text x="584" y="215" class="mono micro" fill="#6e7681">PROGRESS</text>
-  <text x="831" y="215" text-anchor="end" class="mono micro" fill="#3fb950">100%</text>
-  <rect x="584" y="223" width="247" height="7" rx="3.5" fill="#21262d"/>
-  <rect class="fillbar" x="584" y="223" width="247" height="7" rx="3.5" fill="url(#bar)"
-        style="animation: fill 1.6s cubic-bezier(.25,.75,.3,1) .9s both"/>
+  <text x="584" y="212" class="mono micro" fill="#6e7681">SIGNAL</text>
+  <text x="700" y="212" text-anchor="end" class="mono micro" fill="#3fb950">STRONG</text>
+  <rect class="lit s0" x="584" y="232" width="12" height="6"  rx="2" fill="#3fb950"/>
+  <rect class="lit s1" x="601" y="228" width="12" height="10" rx="2" fill="#3fb950"/>
+  <rect class="lit s2" x="618" y="224" width="12" height="14" rx="2" fill="#3fb950"/>
+  <rect class="lit s3" x="635" y="220" width="12" height="18" rx="2" fill="#3fb950"/>
+  <text x="716" y="212" class="mono micro" fill="#6e7681">BATTERY</text>
+  <text x="831" y="212" text-anchor="end" class="mono micro" fill="#3fb950">100%</text>
+  <rect x="716" y="224" width="78" height="14" rx="3" fill="none" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="796" y="228" width="4" height="6" rx="1.5" fill="#30363d"/>
+  <rect class="lit s0" x="719"   y="227" width="16.5" height="8" rx="2" fill="#3fb950"/>
+  <rect class="lit s1" x="737.5" y="227" width="16.5" height="8" rx="2" fill="#3fb950"/>
+  <rect class="lit s2" x="756"   y="227" width="16.5" height="8" rx="2" fill="#3fb950"/>
+  <rect class="lit s3" x="774.5" y="227" width="16.5" height="8" rx="2" fill="#3fb950"/>
 
   <!-- frame drawn last so the border is never clipped -->
   <rect x="0.75" y="0.75" width="893.5" height="278.5" rx="14" fill="none"
