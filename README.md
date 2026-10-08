@@ -44,7 +44,7 @@ Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring f
 
 ###
 
-<h3 data-importer="text" align="left">Tech Stacks</h3>
+<h3 data-importer="text" align="left">Tools</h3>
 
 ###
 
@@ -64,7 +64,7 @@ Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring f
 
 ###
 
-<h3 data-importer="text" align="left">Tools</h3>
+<h3 data-importer="text" align="left">Connect With Me</h3>
 
 ###
 
