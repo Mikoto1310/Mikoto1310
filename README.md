@@ -1,4 +1,9 @@
-# 💫 About Me:
+<p align="center">
+  <img src="./readmebox.svg" alt="Profile Box" width="100%" />
+</p>
+
+
+# About Me:
 Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring full-stack development, cybersecurity, and robotics. I love tinkering with everything from interactive web applications to binary analysis and hands-on hardware prototyping. Still learning, constantly building, and always excited to bridge the gap between software, security, and smart machines.
 
 <div data-importer="profile-views" align="center">
@@ -64,19 +69,15 @@ Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring f
 ###
 
 <div data-importer="socials" align="left">
-  <a href="www.linkedin.com/in/rehan-nasywa-ramadhan" target="_blank">
+  <a href="[www.linkedin.com/in/rehan-nasywa-ramadhan](https://linkedin.com/in/www.linkedin.com/in/rehan-nasywa-ramadhan)" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="44" height="35" alt="linkedin logo"  />
   </a>
   <a href="https://www.instagram.com/rhnnr.__/" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="44" height="35" alt="instagram logo"  />
   </a>
-  <a href="rehannasywa@gmail.com" target="_blank">
+  <a href="(mailto:rehannasywa@gmail.com)" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="44" height="35" alt="gmail logo"  />
   </a>
 </div>
 
 ###
-
-<p align="center">
-  <img src="./readmebox.svg" alt="Profile Box" width="100%" />
-</p>
