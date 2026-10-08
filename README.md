@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./readmebox.svg" alt="Profile Box" width="100%" />
+  <img src="./readmebox.sv" alt="Profile Box" width="100%" />
 </p>
 
 
@@ -79,6 +79,8 @@ Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring f
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="44" height="35" alt="gmail logo"  />
   </a>
 </div>
+
+###
 
 <p align="center">
   <img src="./footbox.svg" alt="Footer Box" width="100%" />
