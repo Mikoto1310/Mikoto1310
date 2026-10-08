@@ -80,4 +80,6 @@ Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring f
   </a>
 </div>
 
-###
+<p align="center">
+  <img src="./footbox.svg" alt="Footer Box" width="100%" />
+</p>
