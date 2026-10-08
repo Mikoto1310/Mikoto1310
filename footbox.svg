@@ -29,13 +29,6 @@
       <stop offset="100%" stop-color="#2ea043"/>
     </linearGradient>
 
-    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.55"/>
-      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-
     <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#1f6f33"/>
       <stop offset="100%" stop-color="#3fb950"/>
@@ -72,8 +65,8 @@
       <feGaussianBlur stdDeviation="6.5"/>
     </filter>
 
-    <filter id="cell-glow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="3.2" result="b"/>
+    <filter id="eye-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
@@ -95,57 +88,28 @@
       .cursor  { fill: #3fb950; animation: blink 1.05s steps(1, end) infinite; }
       .name    { animation: breathe 5s ease-in-out infinite; }
       .led     { animation: breathe 3.4s ease-in-out infinite; }
-      .led-dot { transform-box: fill-box; transform-origin: center;
-                 animation: ping 2.4s ease-in-out infinite; }
-      .sheen   { animation: sheen 10s ease-in-out 3s infinite; }
       .fade-up { animation: fadeUp .8s ease-out .5s both; }
-      .cell    { transform-box: fill-box; transform-origin: center;
-                 animation: pop .5s cubic-bezier(.34,1.4,.64,1) both; }
-      .reveal-a { animation: reveal-a .95s steps(6, end) .35s both; }
       .reveal-b { animation: reveal-b .95s steps(20, end) .35s both; }
-      .d0 { animation-delay: 0.28s; }
-      .d1 { animation-delay: 0.33s; }
-      .d2 { animation-delay: 0.37s; }
-      .d3 { animation-delay: 0.42s; }
-      .d4 { animation-delay: 0.46s; }
-      .d5 { animation-delay: 0.51s; }
-      .d6 { animation-delay: 0.55s; }
-      .d7 { animation-delay: 0.59s; }
-      .d8 { animation-delay: 0.64s; }
-      .d9 { animation-delay: 0.69s; }
-      .d10 { animation-delay: 0.73s; }
-      .d11 { animation-delay: 0.78s; }
-      .d12 { animation-delay: 0.82s; }
-      .d13 { animation-delay: 0.86s; }
-      .d14 { animation-delay: 0.91s; }
-      .d15 { animation-delay: 0.95s; }
+      .eye { animation: eye-blink 5.6s steps(1, end) infinite; }
 
       @keyframes blink   { 0%,45% { opacity: 1; } 46%,100% { opacity: 0; } }
       @keyframes breathe { 0%,100% { opacity: .34; } 50% { opacity: .78; } }
-      @keyframes ping    { 0%,100% { opacity: .45; transform: scale(.82); }
-                           50% { opacity: 1; transform: scale(1); } }
-      @keyframes pop     { from { opacity: 0; transform: scale(.55); }
-                           to   { opacity: 1; transform: scale(1); } }
-      @keyframes fadeUp  { from { opacity: 0; transform: translateY(7px); }
-                           to   { opacity: 1; transform: translateY(0); } }
-      @keyframes sheen   { 0%   { transform: translateX(-360px); }
-                           22%  { transform: translateX(560px); }
-                           100% { transform: translateX(560px); } }
+      @keyframes fadeUp   { from { opacity: 0; transform: translateY(7px); }
+                            to   { opacity: 1; transform: translateY(0); } }
+      @keyframes eye-blink { 0%, 90%, 100% { opacity: 1; }
+                             93%, 96% { opacity: 0; } }
+      @keyframes reveal-b { from { width: 0; } to { width: 210px; } }
+      @keyframes fill     { from { width: 0; } to { width: 247px; } }
 
       /* Respect reduced-motion, and guarantee a correct static render if the
          viewer never runs animations: every element falls back to its natural
-         state (cells visible, prompt fully revealed, bar full). */
+         state (prompt fully revealed, eyes open, bar full). */
       @media (prefers-reduced-motion: reduce) {
-        .cursor, .name, .led, .led-dot, .sheen, .fade-up,
-        .cell, .reveal-a, .reveal-b, .fillbar {
+        .cursor, .name, .led, .fade-up, .eye, .reveal-b, .fillbar {
           animation: none !important;
         }
       }
     </style>
-
-      @keyframes reveal-a { from { width: 0; } to { width: 70.0px; } }
-      @keyframes reveal-b { from { width: 0; } to { width: 210.0px; } }
-      @keyframes fill     { from { width: 0; } to { width: 247px; } }
 
     <clipPath id="reveal-b">
       <rect class="reveal-b" x="96" y="82" width="210.0" height="30"/>
@@ -183,6 +147,81 @@
   <text x="56" y="215" class="mono body dim">connect for collaborations.</text>
 
   <text x="56" y="243" class="mono body dim">[Process completed with code <tspan class="ok">0</tspan>. Session closed]<tspan class="cursor">&#9612;</tspan></text>
+
+  <!-- companion cameo: the header robot, small, waving goodbye -->
+  <g class="fade-up" shape-rendering="crispEdges" aria-hidden="true">
+    <rect x="482" y="190" width="4" height="4" fill="#39d353" class="led"/>
+    <rect x="482" y="194" width="4" height="4" fill="#8b949e"/>
+    <rect x="482" y="198" width="4" height="4" fill="#8b949e"/>
+    <rect x="450" y="202" width="60" height="4" fill="#c9d1d9"/>
+    <rect x="514" y="202" width="8" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="206" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="454" y="206" width="52" height="4" fill="#30363d"/>
+    <rect x="506" y="206" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="514" y="206" width="8" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="210" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="454" y="210" width="4" height="4" fill="#30363d"/>
+    <rect x="458" y="210" width="44" height="4" fill="#010409"/>
+    <rect x="502" y="210" width="4" height="4" fill="#30363d"/>
+    <rect x="506" y="210" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="514" y="210" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="214" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="454" y="214" width="4" height="4" fill="#30363d"/>
+    <rect x="458" y="214" width="8" height="4" fill="#010409"/>
+    <rect x="474" y="214" width="12" height="4" fill="#010409"/>
+    <rect x="494" y="214" width="8" height="4" fill="#010409"/>
+    <rect x="502" y="214" width="4" height="4" fill="#30363d"/>
+    <rect x="506" y="214" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="514" y="214" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="218" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="454" y="218" width="4" height="4" fill="#30363d"/>
+    <rect x="458" y="218" width="8" height="4" fill="#010409"/>
+    <rect x="474" y="218" width="12" height="4" fill="#010409"/>
+    <rect x="494" y="218" width="8" height="4" fill="#010409"/>
+    <rect x="502" y="218" width="4" height="4" fill="#30363d"/>
+    <rect x="506" y="218" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="514" y="218" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="222" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="454" y="222" width="4" height="4" fill="#30363d"/>
+    <rect x="458" y="222" width="44" height="4" fill="#010409"/>
+    <rect x="502" y="222" width="4" height="4" fill="#30363d"/>
+    <rect x="506" y="222" width="12" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="226" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="454" y="226" width="4" height="4" fill="#30363d"/>
+    <rect x="458" y="226" width="16" height="4" fill="#010409"/>
+    <rect x="474" y="226" width="4" height="4" fill="#26a641"/>
+    <rect x="478" y="226" width="8" height="4" fill="#010409"/>
+    <rect x="486" y="226" width="4" height="4" fill="#26a641"/>
+    <rect x="490" y="226" width="12" height="4" fill="#010409"/>
+    <rect x="502" y="226" width="4" height="4" fill="#30363d"/>
+    <rect x="506" y="226" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="230" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="454" y="230" width="4" height="4" fill="#30363d"/>
+    <rect x="458" y="230" width="20" height="4" fill="#010409"/>
+    <rect x="478" y="230" width="4" height="4" fill="#26a641"/>
+    <rect x="482" y="230" width="20" height="4" fill="#010409"/>
+    <rect x="502" y="230" width="4" height="4" fill="#30363d"/>
+    <rect x="506" y="230" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="234" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="454" y="234" width="4" height="4" fill="#30363d"/>
+    <rect x="458" y="234" width="44" height="4" fill="#010409"/>
+    <rect x="502" y="234" width="4" height="4" fill="#30363d"/>
+    <rect x="506" y="234" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="238" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="454" y="238" width="52" height="4" fill="#30363d"/>
+    <rect x="506" y="238" width="4" height="4" fill="#c9d1d9"/>
+    <rect x="450" y="242" width="60" height="4" fill="#c9d1d9"/>
+    <rect x="474" y="246" width="12" height="4" fill="#30363d"/>
+    <rect x="466" y="250" width="28" height="4" fill="#c9d1d9"/>
+    <g class="eye" filter="url(#eye-glow)">
+      <rect x="466" y="214" width="8" height="4" fill="#39d353"/>
+      <rect x="466" y="218" width="8" height="4" fill="#39d353"/>
+    </g>
+    <g class="eye" filter="url(#eye-glow)">
+      <rect x="486" y="214" width="8" height="4" fill="#39d353"/>
+      <rect x="486" y="218" width="8" height="4" fill="#39d353"/>
+    </g>
+  </g>
 
   <!-- session panel -->
   <rect x="560" y="66" width="295" height="188" rx="10" fill="#0d1117" fill-opacity="0.72" stroke="#21262d"/>
