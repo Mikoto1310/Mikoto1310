@@ -75,7 +75,7 @@ Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring f
   <a href="https://www.instagram.com/rhnnr.__/" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="44" height="35" alt="instagram logo"  />
   </a>
-  [![email]<a href="mailto:rehannasywa@gmail.com" target="_blank">
+  <a href="mailto:rehannasywa@gmail.com" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="44" height="35" alt="gmail logo"  />
   </a>
 </div>
