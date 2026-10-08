@@ -70,7 +70,7 @@
   <text x="125" y="115" fill="#f0f6fc" font-size="15" font-weight="600" class="font-mono">whoami</text>
 
   <!-- Main Headline -->
-  <text x="90" y="155" fill="#39d353" font-size="28" font-weight="700" class="font-mono glow-green">Hannwya / Rehan</text>
+  <text x="90" y="155" fill="#39d353" font-size="28" font-weight="700" class="font-mono glow-green">Rehan Nasywa Ramadhan</text>
 
   <!-- Subtitle Info -->
   <text x="90" y="190" fill="#8b949e" font-size="14" class="font-mono">
