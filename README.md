@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./readmebox.svg?v=2" alt="Profile Box" width="100%" />
+  <img src="./readmebox.svg?v=3" alt="Profile Box" width="100%" />
 </p>
 
 
@@ -75,7 +75,7 @@ Hi! I'm Rehan Nasywa Ramadhan, a tech enthusiast exploring full-stack developmen
 ###
 
 <p align="center">
-  <img src="./footbox.svg?v=2" alt="Footer Box" width="100%" />
+  <img src="./footbox.svg?v=3" alt="Footer Box" width="100%" />
 </p>
 
 <div data-importer="profile-views" align="center">

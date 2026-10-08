@@ -1,80 +1,326 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 895 280" width="895" height="280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 895 280" width="895" height="280" role="img" aria-label="Profile banner for Rehan Nasywa Ramadhan">
+  <title>Profile banner for Rehan Nasywa Ramadhan</title>
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#161b22" />
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="55%" stop-color="#11161d"/>
+      <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
 
-    <!-- Grid Pixel Pattern -->
-    <pattern id="grid-pattern" width="16" height="16" patternUnits="userSpaceOnUse">
-      <rect width="11" height="11" rx="2.5" fill="#21262d" opacity="0.45" />
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e252e"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a525d"/>
+      <stop offset="45%" stop-color="#30363d"/>
+      <stop offset="100%" stop-color="#232931"/>
+    </linearGradient>
+
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3fb950" stop-opacity="0.9"/>
+      <stop offset="34%" stop-color="#30363d" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#30363d" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="name-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7ee89a"/>
+      <stop offset="100%" stop-color="#2ea043"/>
+    </linearGradient>
+
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1f6f33"/>
+      <stop offset="100%" stop-color="#3fb950"/>
+    </linearGradient>
+
+    <radialGradient id="halo-green" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#39d353" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="halo-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="led-red" cx="35%" cy="28%" r="78%">
+      <stop offset="0%" stop-color="#ff9c93"/>
+      <stop offset="100%" stop-color="#ec544a"/>
+    </radialGradient>
+    <radialGradient id="led-amber" cx="35%" cy="28%" r="78%">
+      <stop offset="0%" stop-color="#ffd98a"/>
+      <stop offset="100%" stop-color="#e0a223"/>
+    </radialGradient>
+    <radialGradient id="led-green" cx="35%" cy="28%" r="78%">
+      <stop offset="0%" stop-color="#7cf08e"/>
+      <stop offset="100%" stop-color="#1fa832"/>
+    </radialGradient>
+
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1.6" cy="1.6" r="1.05" fill="#2c333b" opacity="0.5"/>
     </pattern>
 
+    <filter id="soft-glow" x="-40%" y="-80%" width="180%" height="260%">
+      <feGaussianBlur stdDeviation="6.5"/>
+    </filter>
+
+    <filter id="cell-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
     <style>
-      .font-mono {
-        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-      }
-      .cursor {
-        animation: blink 1s infinite steps(1);
-      }
-      .glow-green {
-        fill: #39d353;
-        filter: drop-shadow(0 0 6px rgba(57, 211, 83, 0.45));
-      }
-      .accent-green {
-        fill: #26a641;
-      }
-      @keyframes blink {
-        0%, 50% { opacity: 1; }
-        51%, 100% { opacity: 0; }
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .cmd   { font-size: 14px; font-weight: 600; }
+      .body  { font-size: 13px; }
+      .micro { font-size: 10px; font-weight: 600; letter-spacing: 1.6px; }
+      .hero  { font-size: 26px; font-weight: 700; }
+      .dim  { fill: #8b949e; }
+      .key  { fill: #8b949e; }
+      .val  { fill: #c9d1d9; }
+      .ok   { fill: #3fb950; }
+      .blue { fill: #58a6ff; }
+
+      .cursor  { fill: #3fb950; animation: blink 1.05s steps(1, end) infinite; }
+      .name    { animation: breathe 5s ease-in-out infinite; }
+      .led     { animation: breathe 3.4s ease-in-out infinite; }
+      .led-dot { transform-box: fill-box; transform-origin: center;
+                 animation: ping 2.4s ease-in-out infinite; }
+      .sheen   { animation: sheen 10s ease-in-out 3s infinite; }
+      .fade-up { animation: fadeUp .8s ease-out .5s both; }
+      .cell    { transform-box: fill-box; transform-origin: center;
+                 animation: pop .5s cubic-bezier(.34,1.4,.64,1) both; }
+      .reveal-a { animation: reveal-a .95s steps(6, end) .35s both; }
+      .reveal-b { animation: reveal-b .95s steps(20, end) .35s both; }
+      .d0 { animation-delay: 0.28s; }
+      .d1 { animation-delay: 0.33s; }
+      .d2 { animation-delay: 0.37s; }
+      .d3 { animation-delay: 0.42s; }
+      .d4 { animation-delay: 0.46s; }
+      .d5 { animation-delay: 0.51s; }
+      .d6 { animation-delay: 0.55s; }
+      .d7 { animation-delay: 0.59s; }
+      .d8 { animation-delay: 0.64s; }
+      .d9 { animation-delay: 0.69s; }
+      .d10 { animation-delay: 0.73s; }
+      .d11 { animation-delay: 0.78s; }
+      .d12 { animation-delay: 0.82s; }
+      .d13 { animation-delay: 0.86s; }
+      .d14 { animation-delay: 0.91s; }
+      .d15 { animation-delay: 0.95s; }
+
+      @keyframes blink   { 0%,45% { opacity: 1; } 46%,100% { opacity: 0; } }
+      @keyframes breathe { 0%,100% { opacity: .34; } 50% { opacity: .78; } }
+      @keyframes ping    { 0%,100% { opacity: .45; transform: scale(.82); }
+                           50% { opacity: 1; transform: scale(1); } }
+      @keyframes pop     { from { opacity: 0; transform: scale(.55); }
+                           to   { opacity: 1; transform: scale(1); } }
+      @keyframes fadeUp  { from { opacity: 0; transform: translateY(7px); }
+                           to   { opacity: 1; transform: translateY(0); } }
+      @keyframes sheen   { 0%   { transform: translateX(-360px); }
+                           22%  { transform: translateX(560px); }
+                           100% { transform: translateX(560px); } }
+
+      /* Respect reduced-motion, and guarantee a correct static render if the
+         viewer never runs animations: every element falls back to its natural
+         state (cells visible, prompt fully revealed, bar full). */
+      @media (prefers-reduced-motion: reduce) {
+        .cursor, .name, .led, .led-dot, .sheen, .fade-up,
+        .cell, .reveal-a, .reveal-b, .fillbar {
+          animation: none !important;
+        }
       }
     </style>
+
+      @keyframes reveal-a { from { width: 0; } to { width: 70.0px; } }
+      @keyframes reveal-b { from { width: 0; } to { width: 210.0px; } }
+      @keyframes fill     { from { width: 0; } to { width: 247px; } }
+
+    <clipPath id="reveal-a">
+      <rect class="reveal-a" x="96" y="82" width="70.0" height="30"/>
+    </clipPath>
+    <clipPath id="name-clip"><text x="56" y="150" class="mono hero">Rehan Nasywa Ramadhan</text></clipPath>
   </defs>
 
-  <!-- Outer Frame & Border -->
-  <rect x="1" y="1" width="893" height="278" rx="12" fill="url(#bg-grad)" stroke="#30363d" stroke-width="1.5" />
+  <!-- backdrop -->
+  <rect x="1" y="1" width="893" height="278" rx="14" fill="url(#bg)"/>
+  <rect x="1" y="41" width="893" height="238" fill="url(#dots)"/>
+  <ellipse cx="215" cy="150" rx="310" ry="145" fill="url(#halo-green)"/>
+  <ellipse cx="700" cy="150" rx="340" ry="155" fill="url(#halo-blue)"/>
 
-  <!-- Window Header Bar -->
-  <path d="M 1 13 C 1 6.5 6.5 1 13 1 L 882 1 C 888.5 1 894 6.5 894 13 L 894 38 L 1 38 Z" fill="#161b22" />
-  <line x1="1" y1="38" x2="894" y2="38" stroke="#30363d" stroke-width="1" />
-
-  <!-- Terminal Window Buttons (Mac Style) -->
-  <circle cx="24" cy="19" r="6" fill="#ff5f56" stroke="#e0443e" stroke-width="0.5" />
-  <circle cx="44" cy="19" r="6" fill="#ffbd2e" stroke="#dea123" stroke-width="0.5" />
-  <circle cx="64" cy="19" r="6" fill="#27c93f" stroke="#1aab29" stroke-width="0.5" />
-
-  <!-- Header Title -->
-  <text x="447" y="24" fill="#8b949e" font-size="12" text-anchor="middle" class="font-mono">hannwya@workspace:~</text>
-
-  <!-- GitHub Matrix Grid Background -->
-  <rect x="30" y="55" width="835" height="200" fill="url(#grid-pattern)" />
-
-  <!-- Random Highlighted Contribution Dots -->
-  <g>
-    <rect x="30" y="55" width="11" height="11" rx="2.5" class="accent-green" />
-    <rect x="46" y="87" width="11" height="11" rx="2.5" class="glow-green" />
-    <rect x="78" y="71" width="11" height="11" rx="2.5" class="accent-green" />
-    <rect x="110" y="103" width="11" height="11" rx="2.5" fill="#006d32" />
-    <rect x="798" y="71" width="11" height="11" rx="2.5" class="glow-green" />
-    <rect x="814" y="55" width="11" height="11" rx="2.5" class="accent-green" />
-    <rect x="830" y="119" width="11" height="11" rx="2.5" fill="#0e4429" />
-    <rect x="766" y="215" width="11" height="11" rx="2.5" class="glow-green" />
+  <!-- window chrome -->
+  <path d="M1 15 C1 7.3 7.3 1 15 1 L880 1 C887.7 1 894 7.3 894 15 L894 41 L1 41 Z" fill="url(#chrome)"/>
+  <line x1="1" y1="41.5" x2="894" y2="41.5" stroke="#30363d"/>
+  <circle cx="26" cy="21" r="6.3" fill="url(#led-red)"/>
+  <circle cx="46" cy="21" r="6.3" fill="url(#led-amber)"/>
+  <circle cx="66" cy="21" r="6.3" fill="url(#led-green)"/>
+  <text x="447.5" y="25.5" text-anchor="middle" class="mono" font-size="12" fill="#8b949e">hannwya@workspace:~</text>
+  <circle cx="806" cy="21" r="3" fill="#3fb950" class="led"/>
+  <text x="818" y="25" class="mono micro" fill="#6e7681">LIVE</text>
+  <text x="56" y="100" class="mono cmd blue">&#10148; ~</text>
+  <g clip-path="url(#reveal-a)">
+    <text x="96" y="100" class="mono cmd" fill="#f0f6fc">whoami<tspan class="cursor">&#9612;</tspan></text>
   </g>
 
-  <!-- Foreground Content / Banner Card -->
-  <rect x="60" y="65" width="775" height="175" rx="8" fill="#0d1117" opacity="0.9" stroke="#30363d" stroke-width="1" />
+  <!-- name: breathing glow layer, crisp gradient layer, passing sheen -->
+  <text x="56" y="150" class="mono hero name" fill="#39d353"
+        opacity="0.5" filter="url(#soft-glow)">Rehan Nasywa Ramadhan</text>
+  <text x="56" y="150" class="mono hero" fill="url(#name-grad)">Rehan Nasywa Ramadhan</text>
+  <g clip-path="url(#name-clip)" opacity="0.65">
+    <rect class="sheen" x="56" y="122" width="110" height="36" fill="url(#sheen)"/>
+  </g>
 
-  <!-- Text & Terminal Prompt -->
-  <text x="90" y="105" fill="#58a6ff" font-size="14" font-weight="600" class="font-mono">➜ ~</text>
-  <text x="125" y="105" fill="#f0f6fc" font-size="14" font-weight="600" class="font-mono">whoami</text>
-  <rect x="185" y="93" width="7" height="14" fill="#39d353" class="cursor" />
+  <line x1="56" y1="172" x2="452" y2="172" stroke="url(#rule)" stroke-width="1.5"/>
 
-  <!-- Main Headline -->
-  <text x="90" y="145" fill="#39d353" font-size="26" font-weight="700" class="font-mono glow-green">Rehan Nasywa Ramadhan</text>
+  <!-- roles -->
+  <text x="56" y="198" class="mono body"><tspan fill="#c9d1d9">Fullstack Development</tspan><tspan class="blue"> | </tspan><tspan fill="#c9d1d9">Cybersecurity</tspan><tspan class="blue"> | </tspan><tspan fill="#c9d1d9">Robotics</tspan></text>
 
-  <!-- Subtitle Info -->
-  <text x="90" y="178" fill="#8b949e" font-size="13" class="font-mono">Fullstack Development <tspan fill="#58a6ff">|</tspan> Cybersecurity <tspan fill="#58a6ff">|</tspan> Robotics</text>
+  <!-- status -->
+  <circle cx="61" cy="221.5" r="4.2" fill="#3fb950" opacity="0.3"/>
+  <circle cx="61" cy="221.5" r="4.2" fill="#3fb950" class="led-dot"/>
+  <text x="75" y="226" class="mono body"><tspan class="dim">status:</tspan> <tspan fill="#3fb950">building &amp; exploring</tspan></text>
 
-  <text x="90" y="202" fill="#8b949e" font-size="13" class="font-mono">Status: <tspan fill="#26a641">Building &amp; Exploring</tspan></text>
+  <!-- activity panel -->
+  <rect x="488" y="66" width="367" height="188" rx="10" fill="#0d1117" fill-opacity="0.72" stroke="#21262d"/>
+  <text x="512" y="90" class="mono micro" fill="#8b949e">ACTIVITY</text>
+  <circle cx="820" cy="86.5" r="3" fill="#3fb950" class="led"/>
+  <text x="831" y="90" text-anchor="end" class="mono micro" fill="#6e7681">16 WEEKS</text>
+  <line x1="512" y1="102" x2="831" y2="102" stroke="#21262d"/>
+
+  <rect class="cell d0" x="554" y="118" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d0" x="554" y="133" width="11" height="11" rx="2.6" fill="#39d353" filter="url(#cell-glow)"/>
+  <rect class="cell d0" x="554" y="148" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d0" x="554" y="163" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d0" x="554" y="178" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d0" x="554" y="193" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d0" x="554" y="208" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d1" x="569" y="118" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d1" x="569" y="133" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d1" x="569" y="148" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d1" x="569" y="163" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d1" x="569" y="178" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d1" x="569" y="193" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d1" x="569" y="208" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d2" x="584" y="118" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d2" x="584" y="133" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d2" x="584" y="148" width="11" height="11" rx="2.6" fill="#39d353" filter="url(#cell-glow)"/>
+  <rect class="cell d2" x="584" y="163" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d2" x="584" y="178" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d2" x="584" y="193" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d2" x="584" y="208" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d3" x="599" y="118" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d3" x="599" y="133" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d3" x="599" y="148" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d3" x="599" y="163" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d3" x="599" y="178" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d3" x="599" y="193" width="11" height="11" rx="2.6" fill="#39d353" filter="url(#cell-glow)"/>
+  <rect class="cell d3" x="599" y="208" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d4" x="614" y="118" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d4" x="614" y="133" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d4" x="614" y="148" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d4" x="614" y="163" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d4" x="614" y="178" width="11" height="11" rx="2.6" fill="#39d353" filter="url(#cell-glow)"/>
+  <rect class="cell d4" x="614" y="193" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d4" x="614" y="208" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d5" x="629" y="118" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d5" x="629" y="133" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d5" x="629" y="148" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d5" x="629" y="163" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d5" x="629" y="178" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d5" x="629" y="193" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d5" x="629" y="208" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d6" x="644" y="118" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d6" x="644" y="133" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d6" x="644" y="148" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d6" x="644" y="163" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d6" x="644" y="178" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d6" x="644" y="193" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d6" x="644" y="208" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d7" x="659" y="118" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d7" x="659" y="133" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d7" x="659" y="148" width="11" height="11" rx="2.6" fill="#39d353" filter="url(#cell-glow)"/>
+  <rect class="cell d7" x="659" y="163" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d7" x="659" y="178" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d7" x="659" y="193" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d7" x="659" y="208" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d8" x="674" y="118" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d8" x="674" y="133" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d8" x="674" y="148" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d8" x="674" y="163" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d8" x="674" y="178" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d8" x="674" y="193" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d8" x="674" y="208" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d9" x="689" y="118" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d9" x="689" y="133" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d9" x="689" y="148" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d9" x="689" y="163" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d9" x="689" y="178" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d9" x="689" y="193" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d9" x="689" y="208" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d10" x="704" y="118" width="11" height="11" rx="2.6" fill="#39d353" filter="url(#cell-glow)"/>
+  <rect class="cell d10" x="704" y="133" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d10" x="704" y="148" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d10" x="704" y="163" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d10" x="704" y="178" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d10" x="704" y="193" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d10" x="704" y="208" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d11" x="719" y="118" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d11" x="719" y="133" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d11" x="719" y="148" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d11" x="719" y="163" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d11" x="719" y="178" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d11" x="719" y="193" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d11" x="719" y="208" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d12" x="734" y="118" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d12" x="734" y="133" width="11" height="11" rx="2.6" fill="#39d353" filter="url(#cell-glow)"/>
+  <rect class="cell d12" x="734" y="148" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d12" x="734" y="163" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d12" x="734" y="178" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d12" x="734" y="193" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d12" x="734" y="208" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d13" x="749" y="118" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d13" x="749" y="133" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d13" x="749" y="148" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d13" x="749" y="163" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d13" x="749" y="178" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d13" x="749" y="193" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d13" x="749" y="208" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d14" x="764" y="118" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d14" x="764" y="133" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d14" x="764" y="148" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d14" x="764" y="163" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d14" x="764" y="178" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d14" x="764" y="193" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d14" x="764" y="208" width="11" height="11" rx="2.6" fill="#0e4429"/>
+  <rect class="cell d15" x="779" y="118" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d15" x="779" y="133" width="11" height="11" rx="2.6" fill="#161b22"/>
+  <rect class="cell d15" x="779" y="148" width="11" height="11" rx="2.6" fill="#39d353" filter="url(#cell-glow)"/>
+  <rect class="cell d15" x="779" y="163" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d15" x="779" y="178" width="11" height="11" rx="2.6" fill="#006d32"/>
+  <rect class="cell d15" x="779" y="193" width="11" height="11" rx="2.6" fill="#26a641"/>
+  <rect class="cell d15" x="779" y="208" width="11" height="11" rx="2.6" fill="#0e4429"/>
+
+  <!-- legend -->
+  <text x="610" y="239" class="mono micro" fill="#6e7681">LESS</text>
+  <rect x="642"   y="230.5" width="9" height="9" rx="2.2" fill="#161b22"/>
+  <rect x="654.5" y="230.5" width="9" height="9" rx="2.2" fill="#0e4429"/>
+  <rect x="667"   y="230.5" width="9" height="9" rx="2.2" fill="#006d32"/>
+  <rect x="679.5" y="230.5" width="9" height="9" rx="2.2" fill="#26a641"/>
+  <rect x="692"   y="230.5" width="9" height="9" rx="2.2" fill="#39d353"/>
+  <text x="709" y="239" class="mono micro" fill="#6e7681">MORE</text>
+
+  <!-- frame drawn last so the border is never clipped -->
+  <rect x="0.75" y="0.75" width="893.5" height="278.5" rx="14" fill="none"
+        stroke="url(#edge)" stroke-width="1.5"/>
 </svg>
