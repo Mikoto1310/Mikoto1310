@@ -13,7 +13,7 @@
 
     <style>
       .font-mono {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Fira Code", monospace;
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
       }
       .cursor {
         animation: blink 1s infinite steps(1);
@@ -45,12 +45,12 @@
   <circle cx="64" cy="19" r="6" fill="#27c93f" stroke="#1aab29" stroke-width="0.5" />
 
   <!-- Header Title -->
-  <text x="447" y="23" fill="#8b949e" font-size="12" text-anchor="middle" class="font-mono">hannwya@workspace:~/exit</text>
+  <text x="447" y="24" fill="#8b949e" font-size="12" text-anchor="middle" class="font-mono">hannwya@workspace:~/exit</text>
 
   <!-- GitHub Matrix Grid Background -->
   <rect x="30" y="55" width="835" height="200" fill="url(#grid-pattern-footer)" />
 
-  <!-- Random Highlighted Contribution Dots -->
+  <!-- Highlighted Contribution Dots -->
   <g>
     <rect x="46" y="71" width="11" height="11" rx="2.5" class="glow-green" />
     <rect x="94" y="119" width="11" height="11" rx="2.5" class="accent-green" />
@@ -61,24 +61,17 @@
   </g>
 
   <!-- Foreground Content Card -->
-  <rect x="60" y="75" width="775" height="160" rx="8" fill="#0d1117" opacity="0.88" stroke="#30363d" stroke-width="1" />
+  <rect x="60" y="65" width="775" height="175" rx="8" fill="#0d1117" opacity="0.9" stroke="#30363d" stroke-width="1" />
 
   <!-- Terminal Prompt & Command -->
-  <text x="90" y="115" fill="#58a6ff" font-size="15" font-weight="600" class="font-mono">➜ ~</text>
-  <text x="125" y="115" fill="#f0f6fc" font-size="15" font-weight="600" class="font-mono">echo $STATUS &amp;&amp; exit</text>
+  <text x="90" y="105" fill="#58a6ff" font-size="14" font-weight="600" class="font-mono">➜ ~</text>
+  <text x="125" y="105" fill="#f0f6fc" font-size="14" font-weight="600" class="font-mono">echo $STATUS &amp;&amp; exit</text>
+  <rect x="300" y="93" width="7" height="14" fill="#39d353" class="cursor" />
 
   <!-- Main Headline -->
-  <text x="90" y="155" fill="#39d353" font-size="28" font-weight="700" class="font-mono glow-green">Thanks for visiting!</text>
+  <text x="90" y="145" fill="#39d353" font-size="26" font-weight="700" class="font-mono glow-green">Thanks for visiting!</text>
 
   <!-- Subtitle Info -->
-  <text x="90" y="190" fill="#8b949e" font-size="14" class="font-mono">
-    Feel free to explore my repositories or connect for collaborations.
-  </text>
-
-  <text x="90" y="213" fill="#8b949e" font-size="13" class="font-mono">
-    Process completed with code <tspan fill="#39d353">0</tspan>. Session closed.
-  </text>
-
-  <!-- Blinking Terminal Cursor -->
-  <rect x="425" y="202" width="8" height="14" fill="#39d353" class="cursor" />
+  <text x="90" y="178" fill="#8b949e" font-size="13" class="font-mono">Feel free to explore my repositories or connect for collaborations.</text>
+  <text x="90" y="202" fill="#8b949e" font-size="13" class="font-mono">[Process completed with code <tspan fill="#39d353">0</tspan>. Session closed]</text>
 </svg>
