@@ -6,10 +6,6 @@
 # About Me:
 Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring full-stack development, cybersecurity, and robotics. I love tinkering with everything from interactive web applications to binary analysis and hands-on hardware prototyping. Still learning, constantly building, and always excited to bridge the gap between software, security, and smart machines.
 
-<div data-importer="profile-views" align="center">
-  <img data-importer="profile-views" src="https://visitor-badge.laobi.icu/badge?page_id=Mikoto1310.Mikoto1310&"  />
-</div>
-
 ###
 
 <h3 data-importer="text" align="left">Tech Stacks</h3>
