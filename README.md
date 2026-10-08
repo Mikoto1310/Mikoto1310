@@ -69,13 +69,13 @@ Hi! I'm Rehan Nasywa Ramadhan, an aspiring tech enthusiast currently exploring f
 ###
 
 <div data-importer="socials" align="left">
-  <a href="https://linkedin.com/in/www.linkedin.com/in/rehan-nasywa-ramadhan" target="_blank">
+  <a href="https://linkedin.com/in/rehan-nasywa-ramadhan" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="44" height="35" alt="linkedin logo"  />
   </a>
   <a href="https://www.instagram.com/rhnnr.__/" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="44" height="35" alt="instagram logo"  />
   </a>
-  <a href="mailto:rehannasywa@gmail.com" target="_blank">
+  [![email]<a href="mailto:rehannasywa@gmail.com" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="44" height="35" alt="gmail logo"  />
   </a>
 </div>
